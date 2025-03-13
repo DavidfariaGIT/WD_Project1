@@ -11,9 +11,8 @@
 <body>
 
   <%- include('partials/header') %>
-
-    <h2 class="font-bold  pl-48 pt-12">Welcome, <%= data.user.name %>!</h2>
-
+    <h2 class="font-bold pl-48 pt-12">Welcome, <%= data.user.name %>!</h2>
+    <div class="flex">
     <section class="mt-10 mb-10 w-200 pl-45">
     <ul class="list bg-purple-900 rounded-box shadow-md p-10">
       <div><img class="size-10  mb-4" src="https://img.daisyui.com/images/profile/demo/4@94.webp" /></div>
@@ -64,6 +63,7 @@
     </ul>
     <div>
  </section>
+</div>
       <%- include('partials/footer') %>
 </body>
 
