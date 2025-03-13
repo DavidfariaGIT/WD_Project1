@@ -1,18 +1,12 @@
 <%- include('partials/header') %>
+
 <link rel="stylesheet" href="/css/main.css" />
-<div>
-  <h2><%= data.message %></h2>
-  <p>This is my first attempt at Express with EJS</p>
-
-  <h3>Key Features:</h3>
-  <ul>
-    <% data.features.forEach(feature => { %>
-      <li><%= feature %></li>
-    <% }); %>
-  </ul>
-
-  <p>Use my NAV to explore the site!</p>
-</div>
-<button class="btn bg-red-300">Default</button>
-
+<section class="hero min-h-screen bg-gradient-to-r from-indigo-600 to-blue-500 text-white flex items-center">
+  <div class="container mx-auto text-center">
+    <img class="max-w-150 h-100" src="/css/images/Project-One.webp"></img>
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">Design Your Perfect Custom Keyboard</h1>
+      <p class="text-xl md:text-2xl mb-6">Personalize every key, color, and switch to create the ideal typing experience.</p>
+      <a href="#contact" class="btn btn-accent text-lg px-8 py-3">Start Customizing</a>
+  </div>
+</section>
 <%- include('partials/footer') %>
