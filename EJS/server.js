@@ -13,13 +13,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
   const homeData = {
-    title: 'Home',
-    message: 'My Express App',
-    features: [
-      'Built with Express.js',
-      'EJS',
-      'Reusable Footer and Header',
-    ]
+
+
   };
   res.render('home', { data: homeData });
 });
