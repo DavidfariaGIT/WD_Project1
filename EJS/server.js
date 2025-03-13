@@ -88,7 +88,7 @@ app.get('/contact', (req, res) => {
 
 app.get('/page1', (req, res) => {
  const Test = {
-  test: 'one',
+  Title: 'Page One',
   test: 'two'
  }
 res.render('page1', {data: Test });
@@ -96,7 +96,7 @@ res.render('page1', {data: Test });
 
 app.get('/page2', (req, res) => {
   const Test = {
-   test: 'one',
+   Title: 'Page 2',
    test: 'two'
   }
  res.render('page2', {data: Test });
@@ -104,7 +104,7 @@ app.get('/page2', (req, res) => {
 
  app.get('/page3', (req, res) => {
   const Test = {
-   test: 'one',
+   Title: 'page 3',
    test: 'two'
   }
  res.render('page3', {data: Test });
@@ -112,15 +112,7 @@ app.get('/page2', (req, res) => {
 
  app.get('/page4', (req, res) => {
   const Test = {
-   test: 'one',
-   test: 'two'
-  }
- res.render('page4', {data: Test });
- });
-
- app.get('/page4', (req, res) => {
-  const Test = {
-   test: 'one',
+   Title: 'page 4',
    test: 'two'
   }
  res.render('page4', {data: Test });
@@ -128,7 +120,7 @@ app.get('/page2', (req, res) => {
 
  app.get('/page5', (req, res) => {
   const Test = {
-   test: 'one',
+   Title: 'Page 5',
    test: 'two'
   }
  res.render('page5', {data: Test });

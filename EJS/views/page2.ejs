@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page 2</title>
+<link rel="stylesheet" href="/css/main.css"/>
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <div class="mt-40 mb-60 ml-30 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="card bg-purple-900 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Basic Package</h2>
+        <p class="text-lg">$99</p>
+        <ul>
+          <li>Basic Keycaps</li>
+          <li>Standard Switches</li>
+          <li>Basic Customization</li>
+        </ul>
+        <button class="btn btn-primary w-full">Select</button>
+      </div>
+    </div>
+
+    <div class="card bg-purple-900 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Advanced Package</h2>
+        <p class="text-lg">$149</p>
+        <ul>
+          <li>Premium Keycaps</li>
+          <li>Custom Switches</li>
+          <li>Advanced Customization</li>
+        </ul>
+        <button class="btn btn-primary w-full">Select</button>
+      </div>
+    </div>
+
+    <div class="card bg-purple-900 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Pro Package</h2>
+        <p class="text-lg">$199</p>
+        <ul>
+          <li>Luxury Keycaps</li>
+          <li>Exclusive Switches</li>
+          <li>Complete Customization</li>
+        </ul>
+        <button class="btn btn-primary w-full">Select</button>
+      </div>
+    </div>
+  </div>
+
+
+  <%- include('partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page 1</title>
+<link rel="stylesheet" href="/css/main.css"/>
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <div class="carousel w-full max-w-4xl mb-160 mx-auto">
+    <div id="slide1" class="carousel-item relative w-full">
+      <img src="/path/to/keyboard1.jpg" alt="Keyboard Model 1" class="w-full rounded-lg shadow-lg"/>
+    </div>
+    <div id="slide2" class="carousel-item relative w-full">
+      <img src="/path/to/keyboard2.jpg" alt="Keyboard Model 2" class="w-full rounded-lg shadow-lg"/>
+    </div>
+    <div id="slide3" class="carousel-item relative w-full">
+      <img src="/path/to/keyboard3.jpg" alt="Keyboard Model 3" class="w-full rounded-lg shadow-lg"/>
+    </div>
+    <div class="flex justify-center absolute top-2/3 transform -translate-y-1/2 w-full">
+      <a href="#slide1" class="btn btn-primary">1</a>
+      <a href="#slide2" class="btn btn-primary">2</a>
+      <a href="#slide3" class="btn btn-primary">3</a>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

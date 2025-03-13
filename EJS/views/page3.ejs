@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page 3</title>
+<link rel="stylesheet" href="/css/main.css"/>
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <div class="ml-25 mt-30 mb-45 flex flex-wrap justify-center gap-8">
+    <div class="card w-130 bg-purple-900 shadow-lg">
+      <div class="card-body">
+        <p class="text-lg italic">"I absolutely love my custom keyboard! It's exactly what I wanted, and the build quality is fantastic."</p>
+        <h4 class="font-semibold">John Doe</h4>
+        <span class="text-sm text-gray-500">Custom Keyboard Enthusiast</span>
+      </div>
+    </div>
+
+    <div class=" mb-45 card w-130 bg-purple-900 shadow-lg">
+      <div class="card-body">
+        <p class="text-lg italic">"The attention to detail in every component was amazing. Highly recommend!"</p>
+        <h4 class="font-semibold">Sarah Smith</h4>
+        <span class="text-sm text-gray-500">Tech Blogger</span>
+      </div>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>
+</body>
+</html>
