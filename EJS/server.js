@@ -22,7 +22,6 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
   const aboutData = {
-    title: 'About Me',
     school: 'Humber',
     years: '2024-2025',
     description: 'I am currently attending Web Design and Development in Humber College',

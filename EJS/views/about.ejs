@@ -1,14 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+<link rel="stylesheet" href="/css/main.css"/>
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
 <%- include('partials/header') %>
 
-<link rel="stylesheet" href="/css/main.css" />
-<div>
-  <h2>School: <%= data.school %></h2>
-  <p><%= data.description %></p>
-  <p>Years: <%= data.years %></p>
-  <div class="w-[150px] h-[80px] shadow-2xl bg-white rounded-lg flex justify-center items-center">
-    <p class="text-center">shadow-2xl</p>
+<main class="flex flex-row ml-15">
+<div class="checkBtn bg-base-100 border-base-300 collapse border">
+  <input type="checkbox" class="peer" />
+  <div
+    class="py-10 font-extrabold text-white text-center collapse-title bg-primary peer-checked:bg-secondary peer-checked:text-secondary-content"
+  >
+    who are we ?
+  </div>
+  <div
+    class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"
+  >
+  <div>
+    <h2>School: <%= data.school %></h2>
+    <p><%= data.description %></p>
+    <p>Years: <%= data.years %></p>
+  </div>
+  <img src="css/images/chroma-gmmk-pro-adjusted-1684525951270_1d37c1bb-6f6b-4319-a45e-decb4d29fa34.webp" class="pt-10"/>
   </div>
 </div>
+<div class="InfoContainer ml-30 pl-20">
+<h1 class="font-bold text-3xl text-purple-400">What we do</h1>
+<p class="pt-10 w-160">Building custom keyboards allows you to create a unique, personalized typing experience tailored to your needs and preferences. From selecting the right switches and keycaps to customizing the layout and design, every aspect of the keyboard can be optimized for comfort, aesthetics, and performance. Whether you're after a quieter keystroke or a more tactile feel, the possibilities are endless, making it an exciting project for enthusiasts and professionals alike.</p>
+<p class="pt-10 text-2xl text-purple-200 font-extrabold">Since - 2023</p>
+</div>
+</main>
 
 
 <%- include('partials/footer') %>
+</body>
+
+</html>
