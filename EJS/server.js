@@ -35,7 +35,7 @@ app.get('/about', (req, res) => {
 app.get('/profile', (req, res) => {
   const profileData = {
     user: {
-      name: 'Mark',
+      name: 'Products',
       model: ' 129as09j301',
       ProdDate: 'Sept, 2025',
       Info: "Bears of a Fever, captivated audiences with its intense energy and mysterious lyrics. Its popularity skyrocketed after fans shared it widely online, earning Ellie critical acclaim."
@@ -110,6 +110,13 @@ app.get('/page2', (req, res) => {
   }
  res.render('page5', {data: Test });
  });
+
+ app.get('./footer', (req, res) => {
+  const Footer = {
+    Date:'Mar 2025'
+  }
+  res.render('footer', {data: Footer});
+});
 
 
 app.listen(port, () => {
