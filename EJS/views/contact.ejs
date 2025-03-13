@@ -1,40 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+<link rel="stylesheet" href="/css/main.css"/>
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
 <%- include('partials/header') %>
-<link rel="stylesheet" href="/css/main.css" />
-<div>
-  <h2>Get in Touch</h2>
 
-  <div>
-    <p><strong>Address:</strong> <%= data.address %></p>
-    <p><strong>Phone:</strong> <%= data.phone %></p>
-    <p><strong>Email:</strong> <%= data.email %></p>
-    <p><strong>Business Hours:</strong> <%= data.hours %></p>
-  </div>
 
-  <div>
-    <h3>Social Media:</h3>
-    <p><strong>Twitter:</strong> <%= data.socialMedia.twitter %></p>
-    <p><strong>Facebook:</strong> <%= data.socialMedia.facebook %></p>
-    <p><strong>GitHub:</strong> <%= data.socialMedia.github %></p>
-  </div>
-
-  <div>
-    <h3>Send us a message:</h3>
+<div class="ml-155 mb-25 max-w-lg mx-auto mt-10 p-4">
+  <div class="card bg-white shadaow-lg p-6 rounded-lg">
+    <h2 class="text-2xl font-bold text-center mb-4">Contact Us</h2>
     <form>
-      <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+      <div class="form-control mb-4">
+        <label for="name" class="label">
+          <span class="label-text">Full Name</span>
+        </label>
+        <input
+          id="name"
+          type="text"
+          placeholder="Enter your name"
+          class="input input-bordered w-full"
+        />
       </div>
-      <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+
+      <div class="form-control mb-4">
+        <label for="email" class="label">
+          <span class="label-text">Email Address</span>
+        </label>
+        <input
+          id="email"
+          type="email"
+          placeholder="Enter your email"
+          class="input input-bordered w-full"
+        />
       </div>
-      <div>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+
+      <div class="form-control mb-4">
+        <label for="message" class="label">
+          <span class="label-text">Your Message</span>
+        </label>
+        <textarea
+          id="message"
+          placeholder="Enter your message"
+          class="textarea textarea-bordered w-full h-32"
+        ></textarea>
       </div>
-      <button type="submit">Send Message</button>
+
+      <div class="form-control mt-4">
+        <button type="submit" class="btn btn-primary w-full">
+          Send Message
+        </button>
+      </div>
     </form>
   </div>
 </div>
+</main>
+
 
 <%- include('partials/footer') %>
+</body>
+</html>

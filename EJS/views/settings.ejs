@@ -1,18 +1,60 @@
-<%- include('partials/header') %>
-<link rel="stylesheet" href="/css/main.css" />
-<div>
-  <h2>Account Settings</h2>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+<link rel="stylesheet" href="/css/main.css"/>
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
-  <% data.categories.forEach(category => { %>
-    <div>
-      <h3><%= category.name %></h3>
-      <ul>
-        <% category.options.forEach(option => { %>
-          <li><a href="#"><%= option %></a></li>
-        <% }); %>
-      </ul>
-    </div>
-  <% }); %>
-</div>
+</head>
+
+<body>
+
+<%- include('partials/header') %>
+<main class="mb-80">
+<table class="table table-zebra w-full text-lg ml-35">
+  <!-- head -->
+  <thead>
+    <tr>
+      <th class="py-6 text-xl"></th>
+      <th class="py-6 text-xl">Name</th>
+      <th class="py-6 text-xl">Job</th>
+      <th class="py-6 text-xl">Favorite Color</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- row 1 -->
+    <tr>
+      <th class="py-6">1</th>
+      <td class="py-6">Cy Ganderton</td>
+      <td class="py-6">Quality Control Specialist</td>
+      <td class="py-6">Blue</td>
+    </tr>
+    <!-- row 2 -->
+    <tr>
+      <th class="py-6">2</th>
+      <td class="py-6">Hart Hagerty</td>
+      <td class="py-6">Desktop Support Technician</td>
+      <td class="py-6">Purple</td>
+    </tr>
+    <!-- row 3 -->
+    <tr>
+      <th class="py-6">3</th>
+      <td class="py-6">Brice Swyre</td>
+      <td class="py-6">Tax Accountant</td>
+      <td class="py-6">Red</td>
+    </tr>
+    <!--row 4-->
+    <tr>
+      <th class="py-6">3</th>
+      <td class="py-6">Brice Swyre</td>
+      <td class="py-6">Tax Accountant</td>
+      <td class="py-6">Red</td>
+    </tr>
+  </tbody>
+</table>
+</main>
 
 <%- include('partials/footer') %>
+
+</body>
+</html>

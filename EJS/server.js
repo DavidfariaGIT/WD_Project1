@@ -86,6 +86,54 @@ app.get('/contact', (req, res) => {
   res.render('contact', { data: contactData });
 });
 
+app.get('/page1', (req, res) => {
+ const Test = {
+  test: 'one',
+  test: 'two'
+ }
+res.render('page1', {data: Test });
+});
+
+app.get('/page2', (req, res) => {
+  const Test = {
+   test: 'one',
+   test: 'two'
+  }
+ res.render('page2', {data: Test });
+ });
+
+ app.get('/page3', (req, res) => {
+  const Test = {
+   test: 'one',
+   test: 'two'
+  }
+ res.render('page3', {data: Test });
+ });
+
+ app.get('/page4', (req, res) => {
+  const Test = {
+   test: 'one',
+   test: 'two'
+  }
+ res.render('page4', {data: Test });
+ });
+
+ app.get('/page4', (req, res) => {
+  const Test = {
+   test: 'one',
+   test: 'two'
+  }
+ res.render('page4', {data: Test });
+ });
+
+ app.get('/page5', (req, res) => {
+  const Test = {
+   test: 'one',
+   test: 'two'
+  }
+ res.render('page5', {data: Test });
+ });
+
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
