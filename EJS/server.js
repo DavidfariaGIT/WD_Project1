@@ -34,7 +34,6 @@ app.get('/about', (req, res) => {
 
 app.get('/profile', (req, res) => {
   const profileData = {
-    title: 'Humber Info',
     user: {
       name: 'Mark',
       model: ' 129as09j301',
@@ -53,11 +52,10 @@ app.get('/profile', (req, res) => {
 
 app.get('/settings', (req, res) => {
   const settingsData = {
-    title: 'Colours',
     personOne: 'red',
     personTwo: 'green',
     personThree: 'blue',
-    personFour: 'Purple'
+    personFour: 'purple'
 };
   res.render('settings', { data: settingsData });
 });
@@ -65,15 +63,8 @@ app.get('/settings', (req, res) => {
 
 app.get('/contact', (req, res) => {
   const contactData = {
-    title: 'Contact Me',
-    address: '84 Coolstreet lane',
-    phone: ' (555) 123-4567',
-    email: 'n01099486@Humber.ca',
-    hours: 'Monday - Friday: 8am - 5pm',
-    socialMedia: {
-      github: 'github.com/davidfariaGIT'
-    }
-  };
+   header:'Contact us'
+    };
   res.render('contact', { data: contactData });
 });
 
@@ -87,24 +78,28 @@ res.render('page1', {data: Test });
 
 app.get('/page2', (req, res) => {
   const Test = {
-   Title: 'Page 2',
-   test: 'two'
+  package: 'Basic Package',
+  price: '$99',
+  keycaps: 'Basic',
+  swtiches: 'Standard',
+  customization: 'Basic'
   }
  res.render('page2', {data: Test });
  });
 
  app.get('/page3', (req, res) => {
   const Test = {
-   Title: 'page 3',
-   test: 'two'
+  InfoOne:"I absolutely love my custom keyboard! It's exactly what I wanted, and the build quality is fantastic",
+  InfoTwo:"The attention to detail in every component was amazing. Highly recommend"
   }
  res.render('page3', {data: Test });
  });
 
  app.get('/page4', (req, res) => {
   const Test = {
-   Title: 'page 4',
-   test: 'two'
+   Pone: 'A custom keyboard is a personalized keyboard where you can select the switches, keycaps, layout, and other features to suit your preferences',
+   Ptwo: 'It usually takes about 1-2 weeks depending on the complexity of your customizations and order volume'
+
   }
  res.render('page4', {data: Test });
  });

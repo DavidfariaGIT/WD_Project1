@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="bg-orange-50">
 <head>
 <title>Page 2</title>
 <link rel="stylesheet" href="/css/main.css"/>
@@ -12,12 +12,12 @@
   <div class="mt-40 mb-60 ml-30 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     <div class="card bg-purple-900 shadow-xl">
       <div class="card-body">
-        <h2 class="card-title">Basic Package</h2>
-        <p class="text-lg">$99</p>
+        <h2 class="card-title"><%= data.package %></h2>
+        <p class="text-lg"><%= data.price %></p>
         <ul>
-          <li>Basic Keycaps</li>
-          <li>Standard Switches</li>
-          <li>Basic Customization</li>
+          <li>Keycaps: <%= data.keycaps%></li>
+          <li>Swtiches: <%= data.swtiches%></li>
+          <li>Costimization: <%= data.customization %></li>
         </ul>
         <button class="btn btn-primary w-full">Select</button>
       </div>
