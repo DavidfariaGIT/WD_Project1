@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '_reset';
+@import '_variables';
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #483D8B;
+$secondary-color: #E6E6FA;
+$accent-color: #FFE4B5;
+$white-color:FFF0F5;
+
 * {
   font-family: helvetica;
 }
+
+
 
 .hero {
  display: flex;
@@ -15,8 +26,8 @@
 
 .navbar {
   background-color:indigo;
-  color:white;
   gap:70px;
+  color:snow;
   display:flex;
   justify-content: center;
   padding: 20px 40px 20px 40px;
@@ -29,8 +40,8 @@
   background-color:indigo;
   min-width: screen;
   position: absolute;
-  color: white;
   font-size:1rem;
+  color:snow;
 }
 
 .checkBtn{
@@ -44,6 +55,7 @@
   margin-left:100px;
   margin-top:100px;
 }
+
 
 
 

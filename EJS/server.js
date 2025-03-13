@@ -106,8 +106,7 @@ app.get('/page2', (req, res) => {
 
  app.get('/page5', (req, res) => {
   const Test = {
-   Title: 'Page 5',
-   test: 'two'
+   P: 'Sign up for our newsletter and get the latest updates on custom keyboards and exclusive deals.'
   }
  res.render('page5', {data: Test });
  });
