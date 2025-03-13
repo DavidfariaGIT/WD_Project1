@@ -17,52 +17,36 @@
     <ul class="list bg-purple-900 rounded-box shadow-md p-10">
       <div><img class="size-10  mb-4" src="https://img.daisyui.com/images/profile/demo/4@94.webp" /></div>
       <div>
-        <h3>Keyboard 1</h3>
-        <p><strong>Email:</strong>
-          <%= data.user.email %>
+        <h3>Keyboard: Hilux</h3>
+        <p><strong>Model:</strong>
+          <%= data.user.model %>
         </p>
-        <p><strong>Start Date:</strong>
-          <%= data.user.StartDate %>
-        </p>
-        <p><strong>End Date:</strong>
-          <%= data.user.EndDate %>
+        <p><strong>Prod Date:</strong>
+          <%= data.user.ProdDate %>
         </p>
       </div>
-      <p class="list-col-wrap text-xs">
-        "Bears of a Fever" captivated audiences with its intense energy and mysterious lyrics. Its popularity
-        skyrocketed after fans shared it widely online, earning Ellie critical acclaim.
+      <p class="list-col-wrap pt-5 text-xs">
+        <%= data.user.Info %>
       </p>
     </section>
 
 
     <section class="mt-10 mb-10 w-200 pl-45">
-
-      <div class="list bg-purple-900 rounded-box shadow-md p-10 mb-25">
-        <img class="size-10  mb-4" src="https://img.daisyui.com/images/profile/demo/3@94.webp" />
-        <div>keyboard 2</div>
+      <ul class="list bg-purple-900 rounded-box shadow-md p-10">
+        <div><img class="size-10  mb-4" src="https://img.daisyui.com/images/profile/demo/4@94.webp" /></div>
         <div>
-          <h3>Skills out of 100</h3>
-          <p><strong>React:</strong>
-            <%= data.stats.React %>
+          <h3>Keyboard: Miata</h3>
+          <p><strong>Model:</strong>
+            <%= data.modelTwo %>
           </p>
-          <p><strong>JavaScript:</strong>
-            <%= data.stats.JavaScript %>
-          </p>
-          <p><strong>HTML:</strong>
-            <%= data.stats.HTML %>
-          </p>
-          <p><strong>CSS:</strong>
-            <%= data.stats.CSS %>
-          </p>
-          <p class="list-col-wrap text-xs">
-            "Bears of a Fever" captivated audiences with its intense energy and mysterious lyrics. Its popularity
-            skyrocketed after fans shared it widely online, earning Ellie critical acclaim.
+          <p><strong>Prod Date:</strong>
+            <%= data.ProdDateTwo %>
           </p>
         </div>
-      </div>
-    </ul>
-    <div>
- </section>
+        <p class="list-col-wrap pt-5 text-xs">
+          <%= data.InfoTwo %>
+        </p>
+      </section>
 </div>
       <%- include('partials/footer') %>
 </body>

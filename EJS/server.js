@@ -25,6 +25,8 @@ app.get('/about', (req, res) => {
     school: 'Humber',
     years: '2024-2025',
     description: 'I am currently attending Web Design and Development in Humber College',
+    since: '2023',
+    info:"Building custom keyboards allows you to create a unique, personalized typing experience tailored to your needs and preferences. From selecting the right switches and keycaps to customizing the layout and design, every aspect of the keyboard can be optimized for comfort, aesthetics, and performance. Whether you're after a quieter keystroke or a more tactile feel, the possibilities are endless, making it an exciting project for enthusiasts and professionals alike."
 
   };
   res.render('about', { data: aboutData });
@@ -34,40 +36,29 @@ app.get('/profile', (req, res) => {
   const profileData = {
     title: 'Humber Info',
     user: {
-      name: 'David',
-      email: 'n01099486@Humber.ca',
-      StartDate: 'Sept, 2024',
-      EndDate: 'April, 2025'
+      name: 'Mark',
+      model: ' 129as09j301',
+      ProdDate: 'Sept, 2025',
+      Info: "Bears of a Fever, captivated audiences with its intense energy and mysterious lyrics. Its popularity skyrocketed after fans shared it widely online, earning Ellie critical acclaim."
+
     },
-    stats: {
-      React: 70,
-      JavaScript: 62,
-      HTML: 82,
-      CSS: 87,
+    modelTwo: ' 111594j301',
+    ProdDateTwo: 'Sept, 2024',
+    InfoTwo: "Bears of a Fever, captivated audiences with its intense energy and mysterious lyrics. Its popularity skyrocketed after fans shared it widely online, earning Ellie critical acclaim."
     }
-  };
+
   res.render('profile', { data: profileData });
 });
 
 
 app.get('/settings', (req, res) => {
   const settingsData = {
-    title: 'Settings',
-    categories: [
-      {
-        name: 'Account',
-        options: ['Edit Profile', 'Change Password', 'Grades']
-      },
-      {
-        name: 'Tuition',
-        options: ['Amount', 'Aid', 'Timetable']
-      },
-      {
-        name: 'Professors',
-        options: ['Mark', 'Dylan', 'Fagun']
-      }
-    ]
-  };
+    title: 'Colours',
+    personOne: 'red',
+    personTwo: 'green',
+    personThree: 'blue',
+    personFour: 'Purple'
+};
   res.render('settings', { data: settingsData });
 });
 
