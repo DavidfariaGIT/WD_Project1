@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+
+<div>
+  <h2><%= data.message %></h2>
+  <p>This is my first attempt at Express with EJS</p>
+
+  <h3>Key Features:</h3>
+  <ul>
+    <% data.features.forEach(feature => { %>
+      <li><%= feature %></li>
+    <% }); %>
+  </ul>
+
+  <p>Use my NAV to explore the site!</p>
+</div>
+
+<%- include('partials/footer') %>

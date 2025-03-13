@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<div>
+  <h2>Welcome, <%= data.user.name %>!</h2>
+
+  <div>
+    <h3>School Information:</h3>
+    <p><strong>Email:</strong> <%= data.user.email %></p>
+    <p><strong>Start Date:</strong> <%= data.user.StartDate %></p>
+    <p><strong>End Date:</strong> <%= data.user.EndDate %></p>
+  </div>
+
+  <div>
+    <h3>Skills out of 100</h3>
+    <p><strong>React:</strong> <%= data.stats.React %></p>
+    <p><strong>JavaScript:</strong> <%= data.stats.JavaScript %></p>
+    <p><strong>HTML:</strong> <%= data.stats.HTML %></p>
+    <p><strong>CSS:</strong> <%= data.stats.CSS %></p>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

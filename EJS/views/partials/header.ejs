@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link  rel="stylesheet" href="css/styles.css">
+  <title><%= data.title %> - Express EJS Demo</title>
+
+</head>
+<body>
+  <nav>
+    <a href="/" class="<%= data.title === 'Home Page' ? 'active' : '' %>">Home</a>
+    <a href="/about" class="<%= data.title === 'About Us' ? 'active' : '' %>">About</a>
+    <a href="/profile" class="<%= data.title === 'User Profile' ? 'active' : '' %>">Profile</a>
+    <a href="/settings" class="<%= data.title === 'Settings' ? 'active' : '' %>">Settings</a>
+    <a href="/contact" class="<%= data.title === 'Contact Us' ? 'active' : '' %>">Contact</a>
+  </nav>
+  <div class="container">
+    <h1><%= data.title %></h1>
