@@ -22,21 +22,21 @@ app.get('/', (req, res) => {
 
 // DATABASE
 mongoose.connect('mongodb+srv://stacytran221:8lAkMu8OPwbvU9SC@database.hwknlb0.mongodb.net/Products?retryWrites=true&w=majority&appName=Database')
-  .then(() => console.log('Connected!'));
+  .then(() => console.log('Connected!')); // Link to connect the database. Provided by MongoDB
 
 // CREATE
-app.post('/api/products', async (req, res) => {
+app.post('/api/products', async (req, res) => { // /api/products is where I've decided the API lives
   try {
     const product = await Product.create(req.body);
-    res.status(201).json(product);
+    res.status(201).json(product); // 201 indicates successful creation btw
   } catch (err) {
-    res.status(500).json({ message: err.message });
+    res.status(500).json({ message: err.message }); // 500 is server error
   }
 });
 
 // Read
 // Get All
-app.get('/api/products', async (req, res) => {
+app.get('/api/products', async (req, res) => { 
   try {
     const allProducts = await Product.find({});
     res.status(200).json(allProducts)
@@ -45,10 +45,10 @@ app.get('/api/products', async (req, res) => {
   }
 });
 // Get by ID
-app.get('/api/products/:id', async (req, res) => {
+app.get('/api/products/:id', async (req, res) => { // :id communicates a placeholder with the indicated value
   try {
-    const { id } = req.params;
-    const idProduct = await Product.findById(id);
+    const { id } = req.params; // Taking the ID from the product so we can use it for our search
+    const idProduct = await Product.findById(id); // Exactly what it says on the can (finding by ID)
     res.status(200).json(idProduct);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -62,7 +62,7 @@ app.put('/api/products/:id', async (req, res) => {
     const product = await Product.findByIdAndUpdate(id, req.body);
 
     if (!product) {
-      return res.status(404).json({ message: "Product does not exist!" });
+      return res.status(404).json({ message: "Product does not exist!" }); // Feedback for product search with an invalid ID
     }
     const updateProduct = await Product.findById(id);
     res.status(200).json(updateProduct);
