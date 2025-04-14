@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+const Product = require('./models/products.js');
 const app = express();
 const port = 8080;
 
@@ -10,19 +11,29 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
 
 
 app.get('/', (req, res) => {
   const homeData = {
-
-
   };
   res.render('home', { data: homeData });
 });
 
 // DATABASE
-mongoose.connect('mongodb+srv://stacytran221:8lAkMu8OPwbvU9SC@database.hwknlb0.mongodb.net/?retryWrites=true&w=majority&appName=Database')
+mongoose.connect('mongodb+srv://stacytran221:8lAkMu8OPwbvU9SC@database.hwknlb0.mongodb.net/Products?retryWrites=true&w=majority&appName=Database')
   .then(() => console.log('Connected!'));
+
+app.post('/api/products', async (req, res) => {
+  try {
+    const product = await Product.create(req.body);
+    res.status(200).json(product);
+  } catch (err) {
+    res.status(500).json({message: err.message});
+  }
+});
+
+
 
 // PAGES
 app.get('/about', (req, res) => {
