@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const path = require('path');
 const app = express();
 const port = 8080;
@@ -19,7 +20,11 @@ app.get('/', (req, res) => {
   res.render('home', { data: homeData });
 });
 
+// DATABASE
+mongoose.connect('mongodb+srv://stacytran221:8lAkMu8OPwbvU9SC@database.hwknlb0.mongodb.net/?retryWrites=true&w=majority&appName=Database')
+  .then(() => console.log('Connected!'));
 
+// PAGES
 app.get('/about', (req, res) => {
   const aboutData = {
     school: 'Humber',
