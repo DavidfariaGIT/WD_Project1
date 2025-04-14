@@ -35,7 +35,7 @@ app.post('/api/products', async (req, res) => {
 });
 
 // READ
-  // Get All
+// Get All
 app.get('/api/products', async (req, res) => {
   try {
     const allProducts = await Product.find({});
@@ -44,8 +44,8 @@ app.get('/api/products', async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
-  // Get by ID
-app.get('/api/products', async (req, res) => {
+// Get by ID
+app.get('/api/products/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const idProduct = await Product.findById(id);
@@ -53,7 +53,22 @@ app.get('/api/products', async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
-})
+});
+
+// UPDATE
+app.put('/api/products/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const product = await Product.findByIdAndUpdate(id, req.body);
+    if (!product) {
+      return res.status(404).json({ message: "Product does not exist!" });
+    }
+    const updateProduct = await Product.findById(id);
+    res.status(200).json(updateProduct);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
 
 
 // PAGES
