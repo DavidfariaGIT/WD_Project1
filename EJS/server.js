@@ -24,15 +24,6 @@ app.get('/', (req, res) => {
 mongoose.connect('mongodb+srv://stacytran221:8lAkMu8OPwbvU9SC@database.hwknlb0.mongodb.net/Products?retryWrites=true&w=majority&appName=Database')
   .then(() => console.log('Connected!'));
 
-app.get('/api/products', async (req, res) => {
-  try {
-    const allProducts = await Product.find({});
-    res.status(200).json(allProducts)
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
-
 // CREATE
 app.post('/api/products', async (req, res) => {
   try {
@@ -43,8 +34,26 @@ app.post('/api/products', async (req, res) => {
   }
 });
 
-//
-
+// READ
+  // Get All
+app.get('/api/products', async (req, res) => {
+  try {
+    const allProducts = await Product.find({});
+    res.status(200).json(allProducts)
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+  // Get by ID
+app.get('/api/products', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const idProduct = await Product.findById(id);
+    res.status(200).json(idProduct);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+})
 
 
 // PAGES
