@@ -22,8 +22,12 @@ app.get('/', (req, res) => {
 
 // DATABASE
 mongoose.connect('mongodb+srv://stacytran221:8lAkMu8OPwbvU9SC@database.hwknlb0.mongodb.net/Products?retryWrites=true&w=majority&appName=Database')
-  .then(() => console.log('Connected!')) // Link to connect the database. Provided by MongoDB
+  .then(() => console.log('Connected!'))
   .catch((err) => console.log("Failed to connect to MongoDB!")); // Error message if the connection fails
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});
 
 // CREATE
 app.post('/api/products', async (req, res) => { // /api/products is where I've decided the API lives
@@ -188,6 +192,3 @@ app.get('./footer', (req, res) => {
 });
 
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
