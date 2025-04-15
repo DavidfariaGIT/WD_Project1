@@ -17,17 +17,17 @@
           <% data.forEach(product=> { %>
             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h2 class="text-xl font-semibold mb-2">
-                <%= product.name %>
+                <%= product.name %> <!-- Name of the product in db-->
               </h2>
               <div class="flex justify-between">
-                <h3 class="text-gray-600 mb-2">Price:</h3>
-                <p class="text-gray-600 mb-2">$<%= product.price %>
+                <h3 class="text-gray-600 mb-2">Price:</h3>  
+                <p class="text-gray-600 mb-2">$<%= product.price %> <!-- Price of the product in db-->
                 </p>
               </div>
               <div class="flex justify-between">
                 <h3 class="text-gray-600 mb-2">Quantity:</h3>
                 <p class="text-gray-700">
-                  <%= product.quantity %>
+                  <%= product.quantity %> <!-- Quantity of the product in db-->
                 </p>
               </div>
             </div>
