@@ -69,7 +69,7 @@ app.put('/api/products/:id', async (req, res) => {
     if (!product) {
       return res.status(404).json({ message: "Product does not exist!" }); // Feedback for product search with an invalid ID
     }
-    const updateProduct = await Product.findById(id);
+    const updateProduct = await Product.findById(id); // Feedback for product update
     res.status(200).json(updateProduct);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -80,7 +80,7 @@ app.put('/api/products/:id', async (req, res) => {
 app.delete('/api/products/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const product = await Product.findByIdAndDelete(id);
+    const product = await Product.findByIdAndDelete(id); // Feedback for product deletion
 
     if (!product) {
       return res.status(404).json({ message: "Product does not exist!"}); // Feedback for product search with an invalid ID
@@ -105,21 +105,11 @@ app.get('/about', (req, res) => {
   res.render('about', { data: aboutData });
 });
 
-app.get('/profile', (req, res) => {
-  const profileData = {
-    user: {
-      name: 'Products',
-      model: ' 129as09j301',
-      ProdDate: 'Sept, 2025',
-      Info: "Bears of a Fever, captivated audiences with its intense energy and mysterious lyrics. Its popularity skyrocketed after fans shared it widely online, earning Ellie critical acclaim."
-
-    },
-    modelTwo: ' 111594j301',
-    ProdDateTwo: 'Sept, 2024',
-    InfoTwo: "Bears of a Fever, captivated audiences with its intense energy and mysterious lyrics. Its popularity skyrocketed after fans shared it widely online, earning Ellie critical acclaim."
-  }
-
-  res.render('profile', { data: profileData });
+app.get('/profile', (req, res) => { // Fetching the products from the database
+  fetch('http://localhost:8080/api/products')
+  .then(response => response.json()) // turning the response into a json object
+  .then(data => res.render( "profile", {data: data })) // rendering the profile page with the data
+  .catch(error => res.status(500).send('Error fetching products'));
 });
 
 
