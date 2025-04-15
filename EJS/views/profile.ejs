@@ -44,17 +44,17 @@
 
     <%- include('partials/footer') %>
       <script>
-        const searchInput = document.getElementById('searchInput');
-        const productCards = document.querySelectorAll('.bg-white');
+        const searchInput = document.getElementById('searchInput'); // Search input for the products
+        const productCards = document.querySelectorAll('.bg-white'); // Product cards for the products
 
         searchInput.addEventListener('input', (e) => {
-          const searchTerm = e.target.value.toLowerCase();
+          const searchTerm = e.target.value.toLowerCase(); // Search term for the products
 
           productCards.forEach(card => {
-            const productName = card.querySelector('h2').textContent.toLowerCase();
-            if (productName.includes(searchTerm)) {
+            const productName = card.querySelector('h2').textContent.toLowerCase(); // Product name for the products
+            if (productName.includes(searchTerm)) { // If the product name includes the search term, then the product card will be displayed
               card.style.display = 'block';
-            } else {
+            } else { // If the product name does not include the search term, then the product card will be hidden
               card.style.display = 'none';
             }
           });
