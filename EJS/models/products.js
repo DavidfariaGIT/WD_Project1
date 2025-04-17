@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); // this is the mongoose library
 
-const productSchema = mongoose.Schema(
+const productSchema = mongoose.Schema( // this is the schema for the product
     {
         name: {
             type: String,
@@ -26,5 +26,5 @@ const productSchema = mongoose.Schema(
     }
 );
 
-const product = mongoose.model("Product", productSchema);
-module.exports = product;
+const product = mongoose.model("Product", productSchema); // this is the model for the product
+module.exports = product; // this is the export for the product

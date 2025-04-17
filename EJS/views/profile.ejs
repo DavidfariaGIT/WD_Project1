@@ -14,7 +14,7 @@
         class="container mx-auto max-h-[660px] w-1/2 mr-10 ml-12 px-10 py-8 flex flex-col justify-center items-center">
         <h1 class="text-3xl font-bold text-center text-orange-500 mb-8">Products</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-h-[600px] overflow-y-auto pt-15">
-          <% data.forEach(product=> { %>
+          <% data.forEach(product=> { %> <!-- `data` is the data that is being fetched from the database-->
             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h2 class="text-xl font-semibold mb-2">
                 <%= product.name %> <!-- Name of the product in db-->

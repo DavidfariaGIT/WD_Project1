@@ -1,5 +1,5 @@
 const express = require('express');
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); // Mongoose library
 const path = require('path');
 const Product = require('./models/products.js');
 const app = express();
@@ -21,18 +21,18 @@ app.get('/', (req, res) => {
 });
 
 // DATABASE
-mongoose.connect('mongodb+srv://stacytran221:8lAkMu8OPwbvU9SC@database.hwknlb0.mongodb.net/Products?retryWrites=true&w=majority&appName=Database')
-  .then(() => console.log('Connected!'))
+mongoose.connect('mongodb+srv://stacytran221:8lAkMu8OPwbvU9SC@database.hwknlb0.mongodb.net/Products?retryWrites=true&w=majority&appName=Database') // connecting to the database
+  .then(() => console.log('Connected!')) // if the connection is successful, it will log "Connected!"
   .catch((err) => console.log("Failed to connect to MongoDB!")); // Error message if the connection fails
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running at http://localhost:${port}`); // this is the server running at the port
 });
 
 // CREATE
 app.post('/api/products', async (req, res) => { // /api/products is where I've decided the API lives
   try {
-    const product = await Product.create(req.body);
+    const product = await Product.create(req.body); // this is the product that is being created
     res.status(201).json(product); // 201 indicates successful creation btw
   } catch (err) {
     res.status(500).json({ message: err.message }); // 500 is server error
@@ -43,7 +43,7 @@ app.post('/api/products', async (req, res) => { // /api/products is where I've d
 // Get All
 app.get('/api/products', async (req, res) => { 
   try {
-    const allProducts = await Product.find({});
+    const allProducts = await Product.find({}); 
     res.status(200).json(allProducts)
   } catch (err) {
     res.status(500).json({ message: err.message });
